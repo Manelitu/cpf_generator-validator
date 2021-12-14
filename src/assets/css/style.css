@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200&display=swap');
+
+:root {
+  --primary-color: rgb(17, 86, 102);
+  --primary-color-darker: rgb(9, 48, 56);
+}
+html {
+  font-family: 'Changa', sans-serif;
+  font-weight: bold;
+}
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Changa', sans-serif;
+  font-size: 1.3em;
+  line-height: 1.5em;
+  background: linear-gradient(-45deg, #bf5d40, #a52355, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+.title {
+ position: absolute;
+ top: 50px;
+ background: linear-gradient( #ff3c00ec, #e73c7e, #23a6d5, #23d5abe2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+}
+
+.animation{
+  width: 60px;
+  padding: 5px;
+  border-width: 3px;
+  position: relative;
+  top: 120px;
+  border-style: solid;
+  border-image:
+  linear-gradient( #ee765200, #e73c7e, #23a6d5, #23d5ab00) 1 100%;
+  animation: loading 1s infinite cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.animation-none {
+  border-image:
+  linear-gradient( #ffffff00, #ffffff00, #ffffff00, #ffffff00) 1 100%;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  width: 530px;
+  max-height: 20%;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px 10px 50px 50px;
+  border-width: 3px;
+  border-style: solid;
+  border-image: 
+  linear-gradient( #ee765200, #f83434, #23a6d5, #23d5ab00) 1 100%;
+  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.content {
+  min-height: 240px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.cpf {
+  margin: 0;
+  width: 600px;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+
+}
+
+.display {
+  font-size: 50px;
+  width: 370px;
+  height: 60px;
+  font-family: 'Changa', sans-serif;
+  border: 1px solid transparent;
+  text-align: center;
+  overflow: hidden;
+}
+
+.button {
+  width: 200px;
+  height: 70px;
+  padding: 15px 25px;
+  font-size: 26px;
+  font-family: 'Changa', sans-serif;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+
+}
+
+.button:hover {
+  background: linear-gradient(-45deg, #8b4530, #8b254c, #186a88, #188c71);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.invalid, .valid {
+  font-size: 100%;
+  color: #ffffff;
+  background: linear-gradient(-45deg, #00c410, #85cab2, #05bd0b, #83cebd);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+.valid:hover {
+  background: linear-gradient(-45deg, #025509, #5e917f, #004b03, #5e9488);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+.invalid {
+  background: linear-gradient(-45deg, #f80505, #ff9a9a, #ff0000, #ffacac);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+.invalid:hover {
+  background: linear-gradient(-45deg, #a50202, #9d2424, #9e0202, #9d3232);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
